@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\NUnit.3.12.0\build\NUnit.props" Condition="Exists('..\packages\NUnit.3.12.0\build\NUnit.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{54750487-5DB9-4B6B-89AC-CB5043288581}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TestAutomation_UI</RootNamespace>
+    <AssemblyName>TestAutomation_UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Allure.Commons, Version=2.3.64.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Allure.Commons.2.3.64.1\lib\net45\Allure.Commons.dll</HintPath>
+    </Reference>
+    <Reference Include="MimeTypesMap, Version=1.0.3.0, Culture=neutral, PublicKeyToken=1b320cc08ad5aa89, processorArchitecture=MSIL">
+      <HintPath>..\packages\MimeTypesMap.1.0.3\lib\net45\MimeTypesMap.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NUnit.Allure, Version=1.0.6.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.Allure.1.0.6.2\lib\net45\NUnit.Allure.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.12.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.12.0\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TechTalk.SpecFlow, Version=1.9.0.77, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpecFlow.1.9.0\lib\net35\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver, Version=2.47.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.2.47.0\lib\net40\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=2.47.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.2.47.0\lib\net40\WebDriver.Support.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Data\TestdataSetup.cs" />
+    <Compile Include="PageObjects\NetBankPage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Support\Infrastructure.cs" />
+    <Compile Include="Tests\PageBase.cs" />
+    <Compile Include="Tests\SampleTest.cs" />
+    <Compile Include="Tests\TestBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="allureConfig.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Results\categories.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Tools\allure-2.13.1\bin\allure" />
+    <None Include="Tools\allure-2.13.1\bin\allure.bat" />
+    <None Include="Tools\allure-2.13.1\config\allure-cucumber.yml" />
+    <None Include="Tools\allure-2.13.1\config\allure-junit.yml" />
+    <None Include="Tools\allure-2.13.1\config\allure.yml" />
+    <None Include="Tools\allure-2.13.1\lib\config\jetty-logging.properties" />
+    <None Include="Tools\allure-2.13.1\lib\config\log4j.properties" />
+    <None Include="Tools\allure-2.13.1\plugins\behaviors-plugin\allure-plugin.yml" />
+    <None Include="Tools\allure-2.13.1\plugins\custom-logo-plugin\allure-plugin.yml" />
+    <None Include="Tools\allure-2.13.1\plugins\jira-plugin\allure-plugin.yml" />
+    <None Include="Tools\allure-2.13.1\plugins\junit-xml-plugin\allure-plugin.yml" />
+    <None Include="Tools\allure-2.13.1\plugins\packages-plugin\allure-plugin.yml" />
+    <None Include="Tools\allure-2.13.1\plugins\screen-diff-plugin\allure-plugin.yml" />
+    <None Include="Tools\allure-2.13.1\plugins\trx-plugin\allure-plugin.yml" />
+    <None Include="Tools\allure-2.13.1\plugins\xctest-plugin\allure-plugin.yml" />
+    <None Include="Tools\allure-2.13.1\plugins\xray-plugin\allure-plugin.yml" />
+    <None Include="Tools\allure-2.13.1\plugins\xunit-xml-plugin\allure-plugin.yml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="chromedriver.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tools\allure-2.13.1\lib\allure-commandline-2.13.1.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\allure-generator-2.13.1.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\allure-model-2.13.0.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\allure-plugin-api-2.13.1.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\allure1-model-1.0.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\commons-beanutils-1.9.3.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\commons-codec-1.11.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\commons-collections-3.2.2.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\commons-collections4-4.2.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\commons-io-2.6.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\commons-lang3-3.9.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\commons-logging-1.2.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\commons-text-1.3.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\flexmark-0.50.36.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\flexmark-util-0.50.36.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\freemarker-2.3.29.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\httpclient-4.5.9.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\httpcore-4.4.11.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\jackson-annotations-2.9.0.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\jackson-core-2.9.8.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\jackson-databind-2.9.8.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\jackson-dataformat-xml-2.9.8.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\jackson-dataformat-yaml-2.9.8.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\jackson-module-jaxb-annotations-2.9.8.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\javax.activation-api-1.2.0.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\javax.servlet-api-3.1.0.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\jaxb-api-2.3.1.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\jaxb-utils-1.0.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\jcommander-1.78.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\jetty-http-9.4.20.v20190813.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\jetty-io-9.4.20.v20190813.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\jetty-server-9.4.20.v20190813.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\jetty-util-9.4.20.v20190813.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\log4j-1.2.17.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\opencsv-4.6.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\properties-2.0.RC5.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\slf4j-api-1.7.28.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\slf4j-log4j12-1.7.28.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\snakeyaml-1.23.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\stax2-api-3.1.4.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\tika-core-1.22.jar" />
+    <Content Include="Tools\allure-2.13.1\lib\woodstox-core-5.0.3.jar" />
+    <Content Include="Tools\allure-2.13.1\plugins\behaviors-plugin\behaviors-plugin-2.13.1.jar" />
+    <Content Include="Tools\allure-2.13.1\plugins\behaviors-plugin\static\index.js" />
+    <Content Include="Tools\allure-2.13.1\plugins\custom-logo-plugin\custom-logo-plugin-2.13.1.jar" />
+    <Content Include="Tools\allure-2.13.1\plugins\custom-logo-plugin\static\custom-logo.svg" />
+    <Content Include="Tools\allure-2.13.1\plugins\custom-logo-plugin\static\styles.css" />
+    <Content Include="Tools\allure-2.13.1\plugins\jira-plugin\jira-plugin-2.13.1.jar" />
+    <Content Include="Tools\allure-2.13.1\plugins\jira-plugin\lib\allure-jira-commons-2.13.1.jar" />
+    <Content Include="Tools\allure-2.13.1\plugins\jira-plugin\lib\converter-jackson-2.6.1.jar" />
+    <Content Include="Tools\allure-2.13.1\plugins\jira-plugin\lib\jackson-annotations-2.9.0.jar" />
+    <Content Include="Tools\allure-2.13.1\plugins\jira-plugin\lib\jackson-core-2.9.8.jar" />
+    <Content Include="Tools\allure-2.13.1\plugins\jira-plugin\lib\jackson-databind-2.9.8.jar" />
+    <Content Include="Tools\allure-2.13.1\plugins\jira-plugin\lib\okhttp-3.12.0.jar" />
+    <Content Include="Tools\allure-2.13.1\plugins\jira-plugin\lib\okio-1.15.0.jar" />
+    <Content Include="Tools\allure-2.13.1\plugins\jira-plugin\lib\retrofit-2.6.1.jar" />
+    <Content Include="Tools\allure-2.13.1\plugins\junit-xml-plugin\junit-xml-plugin-2.13.1.jar" />
+    <Content Include="Tools\allure-2.13.1\plugins\packages-plugin\packages-plugin-2.13.1.jar" />
+    <Content Include="Tools\allure-2.13.1\plugins\packages-plugin\static\index.js" />
+    <Content Include="Tools\allure-2.13.1\plugins\README.txt" />
+    <Content Include="Tools\allure-2.13.1\plugins\screen-diff-plugin\screen-diff-plugin-2.13.1.jar" />
+    <Content Include="Tools\allure-2.13.1\plugins\screen-diff-plugin\static\index.js" />
+    <Content Include="Tools\allure-2.13.1\plugins\screen-diff-plugin\static\styles.css" />
+    <Content Include="Tools\allure-2.13.1\plugins\trx-plugin\trx-plugin-2.13.1.jar" />
+    <Content Include="Tools\allure-2.13.1\plugins\xctest-plugin\lib\xmlwise-1.2.11.jar" />
+    <Content Include="Tools\allure-2.13.1\plugins\xctest-plugin\xctest-plugin-2.13.1.jar" />
+    <Content Include="Tools\allure-2.13.1\plugins\xray-plugin\lib\allure-jira-commons-2.13.1.jar" />
+    <Content Include="Tools\allure-2.13.1\plugins\xray-plugin\lib\converter-jackson-2.6.1.jar" />
+    <Content Include="Tools\allure-2.13.1\plugins\xray-plugin\lib\jackson-annotations-2.9.0.jar" />
+    <Content Include="Tools\allure-2.13.1\plugins\xray-plugin\lib\jackson-core-2.9.8.jar" />
+    <Content Include="Tools\allure-2.13.1\plugins\xray-plugin\lib\jackson-databind-2.9.8.jar" />
+    <Content Include="Tools\allure-2.13.1\plugins\xray-plugin\lib\okhttp-3.12.0.jar" />
+    <Content Include="Tools\allure-2.13.1\plugins\xray-plugin\lib\okio-1.15.0.jar" />
+    <Content Include="Tools\allure-2.13.1\plugins\xray-plugin\lib\retrofit-2.6.1.jar" />
+    <Content Include="Tools\allure-2.13.1\plugins\xray-plugin\xray-plugin-2.13.1.jar" />
+    <Content Include="Tools\allure-2.13.1\plugins\xunit-xml-plugin\xunit-xml-plugin-2.13.1.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Selenium.WebDriver.ChromeDriver.2.46.0\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.WebDriver.ChromeDriver.2.46.0\build\Selenium.WebDriver.ChromeDriver.targets'))" />
+    <Error Condition="!Exists('..\packages\NUnit.3.12.0\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NUnit.3.12.0\build\NUnit.props'))" />
+  </Target>
+  <Import Project="..\packages\Selenium.WebDriver.ChromeDriver.2.46.0\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\packages\Selenium.WebDriver.ChromeDriver.2.46.0\build\Selenium.WebDriver.ChromeDriver.targets')" />
+</Project>

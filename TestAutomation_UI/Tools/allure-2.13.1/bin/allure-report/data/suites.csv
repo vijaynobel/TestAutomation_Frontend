@@ -1,0 +1,3 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri Jan 10 15:41:26 AEDT 2020","Fri Jan 10 15:41:29 AEDT 2020","3172","","Sample Tests","TestOne","TestAutomation_UI.Tests.SampleTest","TestA","TestA","Add two integers and returns the sum
+"

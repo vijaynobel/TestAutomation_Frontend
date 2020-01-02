@@ -1,0 +1,21 @@
+{
+  "TestAutomation_UI.Tests.SampleTest.TestA" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "abff0dcc2dfd5889",
+      "status" : "passed",
+      "time" : {
+        "start" : 1578631286057,
+        "stop" : 1578631289229,
+        "duration" : 3172
+      }
+    } ]
+  }
+}

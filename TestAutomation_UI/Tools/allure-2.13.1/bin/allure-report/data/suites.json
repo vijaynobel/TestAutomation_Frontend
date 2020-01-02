@@ -1,0 +1,26 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "Sample Tests",
+    "children" : [ {
+      "name" : "TestOne",
+      "children" : [ {
+        "name" : "TestA",
+        "uid" : "abff0dcc2dfd5889",
+        "parentUid" : "e96adbddcaa7b48c5773d902cf52d309",
+        "status" : "passed",
+        "time" : {
+          "start" : 1578631286057,
+          "stop" : 1578631289229,
+          "duration" : 3172
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "e96adbddcaa7b48c5773d902cf52d309"
+    } ],
+    "uid" : "5f75f41cae4ae4fe7519cf713c8d503c"
+  } ]
+}

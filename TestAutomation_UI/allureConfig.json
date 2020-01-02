@@ -1,0 +1,9 @@
+﻿{
+  "allure": {
+    "directory": "C:\\Users\\Rithu\\source\\repos\\TestAutomation_UI\\TestAutomation_UI\\Results",
+    "links": [
+      "https://example.org/{issue}",
+      "https://example.org/{tms}"
+    ]
+  }
+}
